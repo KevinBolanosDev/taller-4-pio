@@ -1,0 +1,290 @@
+ @import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=League+Spartan:wght@100..900&display=swap');
+
+/* Formateando estilos */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+}
+  
+/* Custom properties */
+:root {
+    --outer-space: #4C5760;
+    --cadet-gray: #93A8AC;
+    --pearl: #909590;
+    --khaki: #A59E8C;
+    --dim-gray: #66635B;
+    --space-cadet: #392F5A;
+}
+
+body {
+    font-size: 16px; /* 1rem = 10px */
+    font-family: 'League Spartan', sans-serif;
+    background-color: var(--cadet-gray)
+}
+
+main {
+    margin: 1.5em;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6rem;
+
+    .title__header {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 6rem;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+
+    .img__header {
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        height: 25rem;
+        z-index: -1;
+        top: 0;
+        object-fit: cover;
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+
+    }
+
+    .img__header img {
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        mask-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    }
+}
+
+/* Nav */
+
+.container__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 4.5rem;
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    background-color: var(--outer-space);
+
+    li {
+        list-style: none;
+    }
+
+    li > a {
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+
+    a:hover {
+        color: var(--cadet-gray);
+    }
+}
+
+/* Contenido principal */
+
+.container__img {
+    width: 90%;
+    height: 30em;
+    margin: 0 auto;
+    position: relative;
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+
+    #img {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        text-transform: none;
+        object-fit: cover;
+    }
+}
+
+.title {
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    margin: 1em 0 1em 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    
+    .container__about {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        height: 100%;
+        margin-top: 1em;
+        padding: 1em;
+
+        .container__about-types {
+            display: flex;
+            justify-content: space-around;
+            width: 90%;
+            margin: 0 auto;
+
+            /* Especialidades */
+            .container__especiality {
+                width: 50%;
+                
+                h4 {
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+            /* Filosofia fotografica */
+            .container__filosofy {
+                width: 50%;
+            }
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        .paragraph {
+            margin-top: 1em;
+        }
+
+        a {
+            margin-top: 1em;
+            font-size: 1.2em;
+            text-align: end;
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+
+        a:hover {
+            color: var(--outer-space);
+        }
+    }
+
+    /* Projects */
+
+    .container__projects {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        height: 100%;
+        padding: 1em;
+        order: 4;
+
+        .container__projects-1 {
+            display: flex;
+
+            .container__projects-exposition {
+                width: 50%;
+            }
+
+            .container__projects-serie {
+                width: 50%;
+            }
+        }
+
+        .container__projects-2 {
+            display: flex;
+
+            .container__projects-project {
+                width: 50%;
+            }
+
+            .container__projects-expedition {
+                width: 50%;
+            }
+        }
+
+        .container__projects-instants {
+            margin: 0 auto;
+        }
+    }
+
+    /* Especialidades y contacto */
+    .container__aside {
+        position: absolute;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height: 100%;
+        align-items: center;
+        padding: 1em;
+        margin-top: 2em;
+
+        .container__aside-1 {
+            display: flex;
+
+            li {
+                width: 10rem;
+            }
+
+            .container__aside-left {
+                width: 50%;
+            }
+
+            .container__aside-rigth {
+                width: 50%;
+            }
+        }
+
+        .container__aside-end {
+            margin-left: 6rem;
+        }
+
+        .container__img-aside {
+            width: 70%;
+            height: 10em;
+            overflow: hidden;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .container__img-aside img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        ul {
+            list-style: none;
+        }
+    }
+
+    .container__contact li {
+            margin-top: 1rem;
+    }
+
+
+    /* Footer */
+
+    .container__footer {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        background-color: var(--outer-space);
+        height: 6rem;
+        font-weight: bold;
+        font-size: 2rem;
+        
+        p {
+            margin-bottom: 1rem;
+        }
+    }
+
+
+
+
